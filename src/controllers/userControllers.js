@@ -1,7 +1,7 @@
 import { pool} from "../dbConect.js"
 
 export const getUsers =async (req,res)=>{
-    const [result]=await pool.query('SELECT *FROM prueba.users;')
+    const [result]=await pool.query('SELECT *FROM prueba.datos;')
     res.json(result)
 }
 export const postUsers = async (req,res)=>{

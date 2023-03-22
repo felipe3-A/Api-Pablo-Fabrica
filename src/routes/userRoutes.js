@@ -3,3 +3,8 @@ import{getUser,postUser,deletetUsers,putUsers} from '../controllers/userControll
 const router=Router()
 
 router.get('/usuarios',getUser)
+router.post('/usuarios',postUser)
+router.put('/usuarios',putUsers)
+router.delete('/usuarios',deletetUsers)
+
+export default router
