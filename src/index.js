@@ -5,8 +5,8 @@ app.listen(3000)
 
 
 // app.get('/prueba',async(req,res)=>{
-//     const [resultado]=await pool.query('SELECT * FROM prueba.datos')
+//     const [resultado]=await pool.query('SELECT * FROM prueba.users')
 //     res.json(resultado)
 // })
 
-console.log('listen on port http://localhost:3000/prueba')
+console.log('listen on port 3000')

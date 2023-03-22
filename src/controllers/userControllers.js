@@ -1,15 +1,22 @@
-import { pool} from "../dbConect.js"
+import {pool} from "../dbConect.js"
 
-export const getUsers =async (req,res)=>{
-    const [result]=await pool.query('SELECT *FROM prueba.datos;')
-    res.json(result)
+export const getUser =async (req,res)=>{
+    try {
+        const[rows]=await pool.query('SELECT *FROM prueba.users;')
+    res.json(rows)
+    } catch (error) {
+        return res.status(500).json({
+            message: 'not foud'  
+        })   
+    } 
 }
-export const postUsers = async (req,res)=>{
+
+export const postUser = async (req,res)=>{
     res.send('Usuario creado')
 }
-export const deletetUsers = async (req,res)=>{
+export const deletetUser = async (req,res)=>{
     res.send('Usuario borrado')
 }
-export const putUsers = async (req,res)=>{
+export const putUser = async (req,res)=>{
     res.send('Usuario actualizado')
 }
