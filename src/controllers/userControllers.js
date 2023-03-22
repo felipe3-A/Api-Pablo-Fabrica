@@ -2,14 +2,13 @@ import {pool} from "../dbConect.js"
 
 export const getUser =async (req,res)=>{
     try {
-        const[rows]=await pool.query('SELECT *FROM prueba.users;')
-    res.json(rows)
+        const datos = await model.findAll()
+        res.json(datos)
     } catch (error) {
-        return res.status(500).json({
-            message: 'not foud'  
-        })   
-    } 
-}
+        console.log(message(error))
+    }
+  }
+
 
 export const postUser = async (req,res)=>{
     res.send('Usuario creado')
